@@ -13,7 +13,6 @@ javascript:
   script:
     - npm install
 #    - npm run build -- we use ts-jest, no need for compilation
-    - npm run coverage
   artifacts:
     reports:
       junit:
