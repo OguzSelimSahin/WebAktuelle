@@ -11,7 +11,7 @@ stages:
 javascript:
   stage: test
   script:
-    -if [ ! -f "libssl1.1_1.1.1f-1ubuntu2_amd64.deb" ]; then wget -q http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2_amd64.deb; fi 
+    - if [ ! -f "libssl1.1_1.1.1f-1ubuntu2_amd64.deb" ]; then wget -q http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2_amd64.deb; fi 
         -dpkg -i libssl1.1_1.1.1f-1ubuntu2_amd64.deb
     - npm ci
 #   - npm run build -- we use ts-jest, no need for compilation
