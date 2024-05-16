@@ -11,10 +11,6 @@ beforeAll(async () => {
   await mongoose.connect(uri, { dbName: 'test' });
 });
 
-afterAll(async () => {
-  await mongoose.disconnect();
-  await mongoServer.stop();
-});
 
 describe('POST /human', () => {
   it('should create a new human', async () => {
