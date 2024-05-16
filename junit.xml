@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="5" failures="1" errors="0" time="8.629">
+  <testsuite name="GET /" errors="0" failures="1" skipped="0" timestamp="2024-05-16T16:05:11" time="5.859" tests="1">
+    <testcase classname="GET / should return hello message" name="GET / should return hello message" time="0.038">
+      <failure>Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1872:16)
+    at listenInCluster (node:net:1920:12)
+    at Server.listen (node:net:2008:7)
+    at Function.listen (C:\Users\erayz\OneDrive\Desktop\Webframework\node_modules\express\lib\application.js:635:24)
+    at Object.&lt;anonymous&gt; (C:\Users\erayz\OneDrive\Desktop\Webframework\src\app.ts:74:5)
+    at Runtime._execModule (C:\Users\erayz\OneDrive\Desktop\Webframework\node_modules\jest-runtime\build\index.js:1439:24)
+    at Runtime._loadModule (C:\Users\erayz\OneDrive\Desktop\Webframework\node_modules\jest-runtime\build\index.js:1022:12)
+    at Runtime.requireModule (C:\Users\erayz\OneDrive\Desktop\Webframework\node_modules\jest-runtime\build\index.js:882:12)
+    at Runtime.requireModuleOrMock (C:\Users\erayz\OneDrive\Desktop\Webframework\node_modules\jest-runtime\build\index.js:1048:21)
+    at Object.&lt;anonymous&gt; (C:\Users\erayz\OneDrive\Desktop\Webframework\tests\HelloService.test.ts:2:1)
+    at Runtime._execModule (C:\Users\erayz\OneDrive\Desktop\Webframework\node_modules\jest-runtime\build\index.js:1439:24)
+    at Runtime._loadModule (C:\Users\erayz\OneDrive\Desktop\Webframework\node_modules\jest-runtime\build\index.js:1022:12)
+    at Runtime.requireModule (C:\Users\erayz\OneDrive\Desktop\Webframework\node_modules\jest-runtime\build\index.js:882:12)
+    at jestAdapter (C:\Users\erayz\OneDrive\Desktop\Webframework\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:77:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at runTestInternal (C:\Users\erayz\OneDrive\Desktop\Webframework\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\erayz\OneDrive\Desktop\Webframework\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\erayz\OneDrive\Desktop\Webframework\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="POST /human" errors="0" failures="0" skipped="0" timestamp="2024-05-16T16:05:12" time="6.11" tests="4">
+    <testcase classname="POST /human should create a new human" name="POST /human should create a new human" time="0.068">
+    </testcase>
+    <testcase classname="GET /human/:id should retrieve a human by id" name="GET /human/:id should retrieve a human by id" time="0.019">
+    </testcase>
+    <testcase classname="PUT /human/:id should update a human by id" name="PUT /human/:id should update a human by id" time="0.017">
+    </testcase>
+    <testcase classname="DELETE /human/:id should delete a human by id" name="DELETE /human/:id should delete a human by id" time="0.017">
+    </testcase>
+  </testsuite>
+</testsuites>

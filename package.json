@@ -8,7 +8,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node ./dist/app.js",
-    "test": "./node_modules/.bin/jest --reporters=default --reporters=jest-junit"
+    "test": "jest --reporters=default --reporters=jest-junit"
   },
   "devDependencies": {
     "@babel/core": "^7.24.5",
