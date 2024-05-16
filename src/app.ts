@@ -11,7 +11,6 @@ const helloService = new HelloService();
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
 
-// Connect to MongoDB
 
 
 app.get('/', (req, res) => {
@@ -71,8 +70,6 @@ app.delete('/human/:id', async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
-});
+
 
 export default app;

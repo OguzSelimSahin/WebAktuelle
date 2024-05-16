@@ -73,3 +73,15 @@ describe('DELETE /human/:id', () => {
     expect(getResponse.status).toBe(404);
   });
 });
+
+describe('POST /human', () => {
+  it('should create a new human', async () => {
+    const humanData = { name: "Eray", password: "Hallo123", alter: 23 };
+    const response = await request(app).post('/human').send(humanData);
+    expect(response.status).toBe(201);
+    expect(response.body).toHaveProperty('_id');
+    expect(response.body.name).toBe(humanData.name);
+    expect(response.body.password).toBe(humanData.password);
+    expect(response.body.alter).toBe(humanData.alter);
+  });
+});
