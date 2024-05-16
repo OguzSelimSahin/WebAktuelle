@@ -3,6 +3,7 @@ image: node:16
 
 # Definiert die verschiedenen Stages der Pipeline
 stages:
+  - install
   - build
   - test
 
@@ -10,6 +11,15 @@ stages:
 cache:
   paths:
     - node_modules/
+
+# Job zum Installieren von NPM-Abhängigkeiten
+install_dependencies:
+  stage: install
+  script:
+    - npm install
+  artifacts:
+    paths:
+      - node_modules/
 
 # Job zum Bauen des Projekts
 build_project:
