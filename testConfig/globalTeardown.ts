@@ -15,6 +15,6 @@ export default async function globalTeardown() {
     const instance: MongoMemoryServer = (global as any).__MONGOINSTANCE;
     if (!instance) {
         throw new Error("MongoMemoryServer not found, please fix globalSetup.");
-    }
+    } 
     await instance.stop();
 }
