@@ -17,12 +17,7 @@ import mongoose from "mongoose";
  * Connects to the MongoDB instance. It uses the URI stored in the environment variable
  * `MONGO_URI`. This variable is set in globalSetup.ts.
  */
-beforeAll(async () => {
-    if (!process.env.MONGO_URI) {
-        throw new Error("MongoDB URI not set, please fix globalSetup.")
-    }
-    await mongoose.connect(process.env.MONGO_URI);
-});
+
 
 /**
  * Drops the database and disconnects from the MongoDB instance.

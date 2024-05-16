@@ -1,21 +1,16 @@
-# Template for node see:
-# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Nodejs.gitlab-ci.yml
-# Coverage see:
-# https://gist.github.com/rishitells/3c4536131819cff4eba2c8ab5bbb4570
+image: node:14
 
+cache:
+  paths:
+    - node_modules/
 
-image: node:18
+before_script:
+  - npm install
 
 stages:
   - test
 
-javascript:
-  stage: test
+test:
   script:
-    - npm install
-#    - npm run build -- we use ts-jest, no need for compilation
-    - npm run coverage
-  artifacts:
-    reports:
-      junit:
-        - junit.xml
+    - export PATH=./node_modules/.bin:$PATH
+    - npm run test
