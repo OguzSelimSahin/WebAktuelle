@@ -1,8 +1,8 @@
 module.exports = {
-  preset: 'ts-jest',
   testEnvironment: 'node',
+  globalSetup: './testConfig/globalSetup.ts', // Pfad zur globalSetup Datei
   reporters: [
     'default',
-    ['jest-junit', { outputDirectory: '.', outputName: 'junit.xml' }]
-  ]
+    ['jest-junit', { outputDirectory: '.', outputName: 'jest-junit.xml' }]
+  ],
 };

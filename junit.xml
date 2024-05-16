@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="5" failures="0" errors="0" time="5.38">
-  <testsuite name="POST /human" errors="0" failures="0" skipped="0" timestamp="2024-05-16T16:15:29" time="5.072" tests="5">
+<testsuites name="jest tests" tests="5" failures="0" errors="0" time="3.231">
+  <testsuite name="POST /human" errors="0" failures="0" skipped="0" timestamp="2024-05-16T16:20:28" time="3.123" tests="5">
     <testcase classname="POST /human should create a new human" name="POST /human should create a new human" time="0.11">
     </testcase>
-    <testcase classname="GET /human/:id should retrieve a human by id" name="GET /human/:id should retrieve a human by id" time="0.057">
+    <testcase classname="GET /human/:id should retrieve a human by id" name="GET /human/:id should retrieve a human by id" time="0.056">
     </testcase>
-    <testcase classname="PUT /human/:id should update a human by id" name="PUT /human/:id should update a human by id" time="0.048">
+    <testcase classname="PUT /human/:id should update a human by id" name="PUT /human/:id should update a human by id" time="0.046">
     </testcase>
-    <testcase classname="DELETE /human/:id should delete a human by id" name="DELETE /human/:id should delete a human by id" time="0.054">
+    <testcase classname="DELETE /human/:id should delete a human by id" name="DELETE /human/:id should delete a human by id" time="0.052">
     </testcase>
-    <testcase classname="POST /human should create a new human" name="POST /human should create a new human" time="0.021">
+    <testcase classname="POST /human should create a new human" name="POST /human should create a new human" time="0.019">
     </testcase>
   </testsuite>
 </testsuites>
