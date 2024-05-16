@@ -10,7 +10,7 @@ run_tests:
   stage: test
   script:
     - npm install
-    - npx jest --reporters=default --reporters=jest-junit
+    - npx jest --reporters=default --reporters=jest-junit --output=junit.xml
   artifacts:
     when: always
     reports:
