@@ -1,20 +1,21 @@
-# Template for node see:
-# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Nodejs.gitlab-ci.yml
-# Coverage see:
-# https://gist.github.com/rishitells/3c4536131819cff4eba2c8ab5bbb4570
-
+# Use Node.js 18 as the Docker image
 image: node:18
 
+# Define the stages of the pipeline
 stages:
   - test
 
-javascript:
+# Job for running tests
+run_tests:
   stage: test
   script:
     - npm install
-#    - npm run build -- we use ts-jest, no need for compilation
-    - npm test
+    - npx jest --reporters=default --reporters=jest-junit
   artifacts:
+    when: always
     reports:
       junit:
         - junit.xml
+  cache:
+    paths:
+      - node_modules/
