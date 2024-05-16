@@ -11,7 +11,7 @@ test:
   before_script:
     - npm install
   script:
-    - npm test -- --detectOpenHandles
+    - npm test
   artifacts:
     when: always
     reports:
