@@ -9,7 +9,7 @@
     "build": "tsc",
     "start": "node ./dist/app.js",
     "test": "tsc && jest --reporters=default --reporters=jest-junit --detectOpenHandles",
-    "coverage": "react-scripts test --coverage --coverageReporters=text --coverageReporters=clover --reporters=default --reporters=jest-junit --watchAll=false --passWithNoTests",
+    "coverage": "react-scripts test --coverage --coverageReporters=text --coverageReporters=clover --reporters=default --reporters=jest-junit --watchAll=false --passWithNoTests"
   },
   "devDependencies": {
     "@babel/core": "^7.24.5",
