@@ -12,3 +12,10 @@ test:
     - npm install
   script:
     - npm test -- --detectOpenHandles
+  artifacts:
+    when: always
+    reports:
+      junit: junit.xml
+    paths:
+      - junit.xml
+    expire_in: 1 week
