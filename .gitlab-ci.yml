@@ -12,10 +12,4 @@ test:
     - npm install
   script:
     - npm test 
-  artifacts:
-    when: always
-    reports:
-      junit: jest-junit.xml
-    paths:
-      - jest-junit.xml
-    expire_in: 1 week
+
