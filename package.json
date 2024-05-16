@@ -8,7 +8,7 @@
   "scripts": {
     "build": "npx tsc",
     "start": "node ./dist/app.js",
-    "test": "tsc && jest --reporters=default --reporters=jest-junit --detectOpenHandles",
+    "test": "npx tsc && jest --reporters=default --reporters=jest-junit --detectOpenHandles",
     "coverage": "npm test --coverage --coverageReporters=text --coverageReporters=clover --reporters=default --reporters=jest-junit --watchAll=false --passWithNoTests"
   },
   "devDependencies": {

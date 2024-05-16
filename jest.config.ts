@@ -1,9 +1,19 @@
 module.exports = {
+  preset: 'ts-jest',
   testEnvironment: 'node',
-  globalSetup: './testConfig/globalSetup.ts', // Pfad zur globalSetup Datei
-  globalTeardown: './testConfig/globalTeardown.ts',
+  collectCoverage: true,
   reporters: [
-    'default',
-    ['jest-junit', { outputDirectory: '.', outputName: 'jest-junit.xml' }]
+    "default",
+    ["jest-junit", { suiteNameTemplate: "{filename}" }],
   ],
+  testMatch: ["**/(*.)+(test).?(m)[jt]s?(x)"],
+  collectCoverageFrom: ['<rootDir>/src/**/*.{ts,js,mjs,tsx,jsx,mts}'],
+  testPathIgnorePatterns: ["<rootDir>/dist/", "<rootDir>/node_modules/"],
+  coveragePathIgnorePatterns: ["<rootDir>/dist/", "<rootDir>/node_modules/", "<rootDir>/tests/"],
+  // start mongo memory server
+  globalSetup: "<rootDir>/testConfig/globalSetup.ts",
+  // stop mongo memory server
+  globalTeardown: "<rootDir>/testConfig/globalTeardown.ts",
+  // connect/disconnect before/after all tests of a suite, clear database before each test
+  setupFilesAfterEnv: ["<rootDir>/testConfig/setupFile.ts"]
 };
