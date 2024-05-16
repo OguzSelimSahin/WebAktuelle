@@ -21,7 +21,11 @@ import { MongoMemoryServer } from "mongodb-memory-server";
  * Please do not change this file.
  */
 export default async function globalSetup() {
-    const instance = await MongoMemoryServer.create();
+    const instance = await MongoMemoryServer.create({
+        binary: {
+          version: '7.0.3' // Mindestens 7.0.3 für Debian 12
+        }
+      });
     const uri = instance.getUri();
     (global as any).__MONGOINSTANCE = instance;
     process.env.MONGO_URI = uri.slice(0, uri.lastIndexOf('/'));
